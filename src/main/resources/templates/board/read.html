@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" 
+  xmlns:th="http://www.thymeleaf.org" 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+  layout:decorate="~{layout/basic.html}" >
+
+
+<div layout:fragment="content">
+  <h2>글 상세보기</h2>
+  
+  <ul>
+  	<li>글제목 : [[${dto.title}]]</li>
+  	<li>글내용 : [[${dto.content}]]</li>
+  	<li>작성자 : [[${dto.writer}]]</li>
+  </ul>
+
+  <p th:with="link=${cri.getLink()}">
+    <a th:href="|@{/board/modify(bno=${dto.bno})}${link}|" class="modify">수정</a> <br />
+    <a th:href="|@{/board/remove(bno=${dto.bno})}${link}|" class="modify">삭제</a> 
+  </p>
+</div>
+
+<script layout:fragment="script" th:inline="javascript">
+ console.log("script ..........");
+ 
+</script>

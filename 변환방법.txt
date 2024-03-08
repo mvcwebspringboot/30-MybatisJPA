@@ -1,0 +1,8 @@
+1. 폴더명 -> 프로젝트명
+2. .project -> 프로젝트명
+3. settings.gradle -> 프로젝트명
+
+STS4에서 import후 src>main... 에 ??Application.java 파일의 이름을 바꿔주면 된다.
+
+만약 git을 포함할 경우 프로젝트 폴더에 ?, ! 같은 아이콘이 같이 나오게 된다.
+그럴경우 .git 폴더를 삭제하면 해결된다.
